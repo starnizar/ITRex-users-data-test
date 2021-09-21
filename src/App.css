@@ -74,12 +74,12 @@ td {
 }
 .pagination {
     align-self: flex-end;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .pagination button {
     margin-left: 3px;
     padding: 4px 8px;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0);
     border: none;
     cursor: pointer;
     border-radius: 6px;
@@ -89,6 +89,17 @@ td {
 .pagination button:hover {
     background: #82faff;
     box-shadow: 0 2px 4px black;
+}
+.pagination button:active {
+    box-shadow: 0 0 3px black;
+}
+.pagination button:first-child:active {
+    box-shadow: 0 2px 4px black;
+    transform: translateX(-10%);
+}
+.pagination button:last-child:active {
+    box-shadow: 0 2px 4px black;
+    transform: translateX(+10%);
 }
 .info {
     margin-bottom: 40px;

@@ -22,7 +22,11 @@ const Pagination = () => {
         <div className='pagination'>
             {pages.length > 1 && <button onClick={() => pageButtonHandler(page - 1)}>Previous</button>}
             {pages.map((item, index) => (
-                <button onClick={() => pageButtonHandler(index)} key={index}>
+                <button
+                    style={(page===index) ? {color:'red', transform:'scale(1.5)'} : null}
+                    onClick={() => pageButtonHandler(index)}
+                    key={index}
+                >
                     {index + 1}
                 </button>
             ))}
